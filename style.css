@@ -193,6 +193,7 @@ html, body {
 }
 
 .location p{
+    position: fixed;
     text-align: center;
     font-size: 20px;
     font-weight: 900;
