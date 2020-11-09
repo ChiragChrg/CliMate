@@ -128,14 +128,13 @@ html, body {
 
 .weather-icon{
     position: relative;
-    margin-top: 33%;
+    top: 30%;
     text-align: center;
 }
 
 .temp-value{
-    position: fixed;
     width: 100%;
-    top: 64%;
+    margin-top: 5%;
 
 }
 
@@ -148,12 +147,12 @@ html, body {
 }
 
 .temp-value button{
-    position: absolute;
+    position: fixed;
     border-style: none;
     background: none;
     font-size: 25px;
     font-weight: 900;
-    top: 1%;
+    top: 56%;
     left: 65%;
     padding: 5px 9px;
     border: 2px solid #fff;
@@ -173,8 +172,7 @@ html, body {
 }
 
 .temp-description{
-    position: fixed;
-    top: 75%;
+    margin-top: 10%;
     width: 100%;
 }
 
@@ -187,8 +185,7 @@ html, body {
 }
 
 .location{
-    position: fixed;
-    top: 33%;
+    margin-top: 20%;
     width: 100%;
 }
 
@@ -202,7 +199,7 @@ html, body {
 
 footer{
     position: relative;
-    top: 35%;
+    margin-top: 45%;
 }
 
 footer p{
