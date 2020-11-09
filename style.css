@@ -81,8 +81,14 @@ html, body {
     transition: 0.3s;
 }
 
+.sidebar a.active{
+    color: #fff;
+    background-color: rgba(48, 46, 46, 0.9);
+}
+
 .sidebar a:hover{
     color: #fff;
+    background-color: rgba(48, 46, 46, 0.9);
 }
 
 .nav-main{
@@ -259,7 +265,7 @@ html, body {
 .bgimg{
     position: fixed;
     z-index: -1;
-    top: -50%;
+    top: -10%;
     bottom: 0%;
 }
 
@@ -271,7 +277,7 @@ html, body {
 /* Header  */
 .header{
     /* display: inline-flex; */
-    margin: 1.5rem 1rem 1.5rem 1rem;
+    margin: 1.5rem 1rem 1.5rem 2rem;
     /* border: 1px solid #000; */
 
 }
@@ -313,7 +319,7 @@ html, body {
     color: #fff;
     font-size: 17px;
     font-weight: 500;
-    transition: 0.3s ease-in-out;
+    transition: 0.2s ease-in-out;
 }
 
 .nav ul li a:hover{
@@ -455,5 +461,50 @@ footer p{
     text-align: center;
 }
 
+
+
+/* ------------------------------------------------------------------------------------------------------------------------- */
+
+/* About Page Css */
+.p-section{
+    margin-top: 12%;
+    margin-left: 15%;
 }
 
+.p-section p{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.giticon{
+    margin-top: 8%;
+    text-align: center;
+}
+
+.giticon a{
+    text-decoration: none;
+    /* font-family: QuickSand; */
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    color: #fff;
+    box-shadow: 2px 3px 25px 10px #888888;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.giticon a:hover{
+    border-radius: 0px 55px 10px 35px;
+    background-color: #fff;
+    color: #000;
+}
+
+.footer{
+    margin-top: 10%;
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------------------- */
+
+}

@@ -8,52 +8,50 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand&amp;display=swap">
 </head>
 <body>
-   
-        <div class="header">
-            <div class="logo">
-                <h3>Cli Mate </h3>
-            </div>
-            <div class="nav">
-                <div id="mySidepanel" class="sidebar">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                    <ul>
-                        <li>
-                            <a class="active" href="index.html">Home</a>
-                            <a href="#">About</a>
-                            <a href="#">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="nav-main">
-                 <button class="openbtn" onclick="openNav()">&#9776;</button>
+    <div class="header">
+        <div class="logo">
+            <h3>Cli Mate </h3>
+        </div>
+        <div class="nav">
+            <div id="mySidepanel" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <ul>
+                    <li>
+                        <a class="active" href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
             </div>
         </div>
-    
-        <div class="search-location">
-            <input type="text" placeholder="Search City" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search City'" value=""/>
-            <!-- <button onclick="getResults()">Search</button> -->
+        <div class="nav-main">
+            <button class="openbtn" onclick="openNav()">&#9776;</button>
         </div>
-    
-        <div class="notification"></div>
-    
-        <div class="weather-data">
-            <div class="location">
-                <p>-</p>
-            </div>
+    </div>
 
-            <div class="weather-icon">
-                <img src="assets/icons/unknown.png" alt="weather-icon"/>
-            </div>
-            <div class="temp-value">
-                <p>-<span>&deg;<span>C</p>
-                <button>&deg;<span>C<span></button>
-            </div>
-            <div class="temp-description">
-                <p>-</p>
-            </div>
-            
+    <div class="search-location">
+        <input type="text" placeholder="Search City" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search City'" value=""/>
+        <!-- <button onclick="getResults()">Search</button> -->
+    </div>
+
+    <div class="notification"></div>
+
+    <div class="weather-data">
+        <div class="location">
+            <p>-</p>
         </div>
+        <div class="weather-icon">
+            <img src="assets/icons/unknown.png" alt="weather-icon"/>
+        </div>
+        <div class="temp-value">
+            <p>-<span>&deg;<span>C</p>
+            <button>&deg;<span>C<span></button>
+        </div>
+        <div class="temp-description">
+            <p>-</p>
+        </div>   
+    </div>
+    
     <div class="bgimg">
         <img src="assets/unknown.jpg" alt="weather-img" scroll="no"/>
     </div>
