@@ -134,7 +134,7 @@ html, body {
 
 .temp-value{
     position: absolute;
-    width: 100%;
+    width: 395px;
     top: 64%;
 
 }
@@ -175,7 +175,7 @@ html, body {
 .temp-description{
     position: absolute;
     top: 75%;
-    width: 100%;
+    width: 395px;
 }
 
 .temp-description p{
@@ -193,7 +193,6 @@ html, body {
 }
 
 .location p{
-    position: fixed;
     text-align: center;
     font-size: 20px;
     font-weight: 900;
