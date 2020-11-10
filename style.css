@@ -178,7 +178,6 @@ html, body {
 .temp-value{
     width: 100%;
     margin-top: 10%;
-
 }
 
 .temp-value p{
@@ -189,14 +188,19 @@ html, body {
     text-shadow: 2px 2px 4px #000000;
 }
 
-.temp-value button{
-    position: fixed;
+.ftoc{
+    position: relative;
+    width: 100%;
+    margin-top: -11.5%;
+    left: 66%;
+}
+
+.ftoc button{
+    text-align: center;
     border-style: none;
     background: none;
     font-size: 25px;
     font-weight: 900;
-    top: 63%;
-    left: 65%;
     padding: 5px 9px;
     border: 2px solid #fff;
     border-radius: 50%;
