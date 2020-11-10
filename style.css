@@ -242,6 +242,47 @@ footer p{
     text-align: center;
 }
 
+/* About Page Css */
+.p-section{
+    margin-top: 45%;
+    margin-left: 8%;
+}
+
+.p-section p{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.giticon{
+    margin-top: 35%;
+    text-align: center;
+}
+
+.giticon a{
+    text-decoration: none;
+    /* font-family: QuickSand; */
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    border-radius: 0px 55px 10px 35px;
+    background-color: #fff;
+    color: #000;
+    box-shadow: 2px 3px 25px 10px #888888;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+/* .giticon a:hover{
+    border-radius: 0px 55px 10px 35px;
+    background-color: #fff;
+    color: #000;
+} */
+
+.footer{
+    margin-top: 60%;
+}
+
+
 }
 
 
