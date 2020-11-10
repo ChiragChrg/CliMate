@@ -38,10 +38,10 @@ html, body {
 
 /* Header  */
 .header{
-    /* display: inline-flex; */
+    display: flex;
     margin: 1.5rem 1rem 1.5rem 1rem;
-    /* border: 1px solid #000; */
-
+    /* border: 1px solid #fff; */
+    justify-content: space-between;
 }
 
 .logo{
@@ -157,7 +157,7 @@ html, body {
 
 /* Weather Data  */
 .location{
-    margin-top: 40%;
+    margin-top: 35%;
     width: 100%;
 }
 
@@ -170,19 +170,23 @@ html, body {
 }
 
 .weather-icon{
-    position: relative;
-    top: 30%;
+    /* position: relative; */
+    margin-top: 5%;
     text-align: center;
 }
 
 .temp-value{
     width: 100%;
     margin-top: 10%;
+    display: flex;
+    /* border: 1px solid #000; */
+    /* align-items: center; */
+    justify-content: space-evenly;
 
 }
 
 .temp-value p{
-    text-align: center;
+    /* text-align: center; */
     font-size: 35px;
     font-weight: 900;
     color: #fff ;
@@ -190,13 +194,13 @@ html, body {
 }
 
 .temp-value button{
-    position: fixed;
+    /* position: fixed; */
     border-style: none;
     background: none;
     font-size: 25px;
     font-weight: 900;
-    top: 63.5%;
-    left: 65%;
+    /* top: 63.5%;
+    left: 65%; */
     padding: 5px 9px;
     border: 2px solid #fff;
     border-radius: 50%;
@@ -243,8 +247,9 @@ footer p{
 }
 
 /* About Page Css */
+
 .p-section{
-    margin-top: 45%;
+    margin-top: 40%;
     margin-left: 8%;
 }
 
@@ -279,7 +284,7 @@ footer p{
 } */
 
 .footer{
-    margin-top: 60%;
+    margin-top: 40%;
 }
 
 
@@ -287,7 +292,7 @@ footer p{
 
 
 /* --------------------------  Desktop Responsive Design  -------------------------- */
-@media (min-width: 395px)
+@media (min-width: 396px)
 {
 *{
     margin: 0;
