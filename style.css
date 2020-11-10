@@ -195,7 +195,7 @@ html, body {
     background: none;
     font-size: 25px;
     font-weight: 900;
-    top: 60.5%;
+    top: 63%;
     left: 65%;
     padding: 5px 9px;
     border: 2px solid #fff;
@@ -231,7 +231,7 @@ html, body {
 /* Copyrights  */
 footer{
     position: relative;
-    margin-top: 35%;
+    margin-top: 25%;
 }
 
 footer p{
