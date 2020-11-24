@@ -367,14 +367,14 @@ html, body {
 }
 
 /* Background Image  */
-.bgimg{
+.bgimg, .abgimg{
     position: fixed;
     z-index: -1;
     top: -10%;
     bottom: 0%;
 }
 
-.bgimg img{
+.bgimg img, .abgimg img{
     width: 100%;
     height: 100%;
 }
