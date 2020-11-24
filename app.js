@@ -8,7 +8,9 @@ const degreeElement = document.querySelector(".temp-value button");
 const descElement = document.querySelector(".temp-description p");
 const locationElement  = document.querySelector(".location p");
 const notificationElement = document.querySelector(".notification");
-const bgElement = document.querySelector(".bgimg")
+const bgElement = document.querySelector(".bgimg");
+const mbgElement = document.querySelector(".mbgimg");
+
 
 //Weather Data
 const weather = {};
@@ -104,9 +106,10 @@ function getResults (query){
 function displayWeather(){
     iconElement.innerHTML = `<img src="assets/icons/${weather.iconId}.png"/>`;
     descElement.innerHTML = `${weather.description}`;
-    tempElement.innerHTML = `${weather.temperature.value}&deg;<span>C<span>`;
+    tempElement.innerHTML = `${weather.temperature.value} &deg;<span>C<span>`;
     locationElement.innerHTML = `${weather.city} , ${weather.country}`;
     bgElement.innerHTML = `<img src="assets/${weather.iconId}.jpg"/>`;
+    mbgElement.innerHTML = `<img src="assets/mobile/${weather.iconId}.jpg"/>`;
 }
 
 
