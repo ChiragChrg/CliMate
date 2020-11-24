@@ -60,7 +60,7 @@ html, body {
 .mbgimg img{
     position: fixed;
     width: 100vw;
-    height: 110%;
+    height: 100vh;
 }
 
 
