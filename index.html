@@ -1,70 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cli Mate</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand&amp;display=swap">
-</head>
-<body>
-    <div class="header">
-        <div class="logo">
-            <h3>Cli Mate </h3>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mstyle.css" />
+    <link rel="shortcut icon" href="./assets/favo.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Quicksand&amp;display=swap"
+    />
+    <script src="./js/icon.js" crossorigin="anonymous"></script>
+    <!-- <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    /> -->
+  </head>
+  <body>
+    <header>
+      <a href="https://klimate.netlify.app/" target="_blank" class="logo">
+        <i class="fal fa-cloud-sun-rain fa-3x"></i>
+        <h4>&nbsp;CliMate</h4>
+      </a>
+
+      <div class="navMain">
+        <button class="openbtn" onclick="openNav()">&#9776;</button>
+      </div>
+
+      <div class="nav">
+        <div id="mySidepanel" class="sidebar">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            >&times;
+          </a>
+          <ul>
+            <li>
+              <a class="active" href="index.html">Home</a>
+              <a href="about.html">About</a>
+            </li>
+          </ul>
         </div>
-        <div class="nav">
-            <div id="mySidepanel" class="sidebar">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <ul>
-                    <li>
-                        <a class="active" href="index.html">Home</a>
-                        <a href="about.html">About</a>
-                        <!-- <a href="#">Contact</a> -->
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="nav-main">
-            <button class="openbtn" onclick="openNav()">&#9776;</button>
-        </div>
+      </div>
+    </header>
+
+    <div class="alert">ALERT</div>
+
+    <div class="search">
+      <input
+        type="text"
+        placeholder="Search City"
+        onfocus="this.placeholder = ''"
+        onblur="this.placeholder = 'Search City'"
+        value=""
+      />
     </div>
 
-    <div class="search-location">
-        <input type="text" placeholder="Search City" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search City'" value=""/>
-        <!-- <button onclick="getResults()">Search</button> -->
+    <div class="data">
+      <h2 class="location">City Name</h2>
+      <div class="deg">
+        <button>&deg;C</button>
+      </div>
+      <div class="weatherIcon">
+        <img src="./assets/icons/unknown.png" alt="Unknown icon" />
+      </div>
+      <div class="tempValue">
+        <p>- &deg; C</p>
+      </div>
+      <div class="tempDesc">
+        <p class="descMain">descMain</p>
+        <p class="descSub">Description</p>
+      </div>
     </div>
 
-    <div class="notification"></div>
+    <div class="moreData">
+      <div class="sec1">
+        <i class="lon fal fa-arrows-v fa-2x"> <p>Lon</p></i>
+        <i class="sunUp fal fa-sunrise fa-2x"> <p>Sunrise</p></i>
+        <i class="minTemp fal fa-temperature-down fa-2x"> <p>MinTemp</p></i>
+        <i class="press fal fa-tachometer-alt fa-2x"> <p>Pressure</p></i>
+        <i class="windSpd fal fa-kite fa-2x"> <p>Wind speed</p></i>
+      </div>
+      <div class="sec2">
+        <i class="lat fal fa-arrows-h fa-2x"> <p>Lat</p></i>
+        <i class="sunDown fal fa-sunset fa-2x"> <p>Sunset</p></i>
+        <i class="maxTemp fal fa-temperature-up fa-2x"> <p>MaxTemp</p></i>
+        <i class="humid far fa-humidity fa-2x"> <p>Humidity</p></i>
+        <i class="windDir far fa-compass fa-2x"> <p>Direction</p></i>
+      </div>
 
-    <div class="weather-data">
-        <div class="location">
-            <p>-</p>
-        </div>
-        <div class="weather-icon">
-            <img src="assets/icons/unknown.png" alt="weather-icon"/>
-        </div>
-        <div class="temp-value">
-            <p>- <span> &deg;<span> C</p>
-            <button>&deg;<span>C<span></button>
-        </div>
-        <div class="temp-description">
-            <p>-</p>
-        </div>   
-    </div>
-    
-    <div class="bgimg">
-        <img src="assets/unknown.jpg" alt="weather-img" scroll="no"/>
-    </div>
-
-    <div class="mbgimg">
-        <img src="assets/mobile/unknown.jpg" alt="weather-mimg" scroll="no"/>
+      <!-- <div class="coord">
+        <i class="lon fal fa-arrows-v"> Lon</i>
+        <i class="lat fal fa-arrows-h"> Lat</i>
+      </div>
+      <div class="sun">
+        <i class="sunUp fal fa-sunrise"> Sunrise</i>
+        <i class="sunDown fal fa-sunset"> Sunset</i>
+      </div>
+      <div class="tempInfo">
+        <i class="minTemp fal fa-temperature-down"> MinTemp</i>
+        <i class="maxTemp fal fa-temperature-up"> MaxTemp</i>
+      </div>
+      <div class="weathInfo">
+        <i class="press fal fa-tachometer-alt"> Pressure</i>
+        <i class="humid far fa-humidity"> Humidity</i>
+      </div>
+      <div class="wind">
+        <i class="windSpd fal fa-kite"> Wind speed</i>
+        <i class="windDir far fa-compass"> Direction</i>
+      </div> -->
     </div>
 
     <footer>
-        <p>&#169; Copyright 2020 ChiragChrg</p>
+      <p>&#169; Copyright 2020 ChiragChrg</p>
     </footer>
 
-    <script src="app.js"></script>
-    <script src="nav.js"></script>
-</body>
+    <div class="bgimg">
+      <img src="assets/unknown.jpg" alt="weather-img" scroll="no" />
+    </div>
+
+    <div class="mbgimg">
+      <img src="assets/mobile/unknown.jpg" alt="weather-mimg" scroll="no" />
+    </div>
+
+    <script src="./js/app.js"></script>
+    <script src="./js/nav.js"></script>
+  </body>
 </html>

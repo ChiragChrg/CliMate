@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cli Mate</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand&amp;display=swap">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+</head>
+<body>
+    <div class="header">
+        <a href="https://klimate.netlify.app/" target="_blank" class="logo">
+            <i class="far fa-calendar-alt fa-2x"></i>
+            <h4>&nbsp;CliMate</h4></a
+          >
+          
+        <div class="nav">
+            <div id="mySidepanel" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <ul>
+                    <li>
+                        <a class="active" href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <!-- <a href="#">Contact</a> -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav-main">
+            <button class="openbtn" onclick="openNav()">&#9776;</button>
+        </div>
+    </div>
+
+    <div class="search-location">
+        <input type="text" placeholder="Search City" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search City'" value=""/>
+        <!-- <button onclick="getResults()">Search</button> -->
+    </div>
+
+    <div class="notification"></div>
+
+    <div class="weather-data">
+        <div class="location">
+            <p>-</p>
+        </div>
+        <div class="weather-icon">
+            <img src="assets/icons/unknown.png" alt="weather-icon"/>
+        </div>
+        <div class="temp-value">
+            <p>- <span> &deg;<span> C</p>
+            <button>&deg;<span>C<span></button>
+        </div>
+        <div class="temp-description">
+            <p>-</p>
+        </div>   
+    </div>
+    
+    <div class="bgimg">
+        <img src="assets/unknown.jpg" alt="weather-img" scroll="no"/>
+    </div>
+
+    <div class="mbgimg">
+        <img src="assets/mobile/unknown.jpg" alt="weather-mimg" scroll="no"/>
+    </div>
+
+    <footer>
+        <p>&#169; Copyright 2020 ChiragChrg</p>
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="nav.js"></script>
+</body>
+</html>

@@ -1,62 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About - Cli Mate</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand&amp;display=swap">
-    <script src="https://kit.fontawesome.com/a8791986bc.js" crossorigin="anonymous"></script>
-</head>
-<body> 
-    <div class="header">
-        <div class="logo">
-            <h3>Cli Mate </h3>
-        </div>
-        <div class="nav">
-            <div id="mySidepanel" class="sidebar">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <ul>
-                    <li>
-                        <a href="index.html">Home</a>
-                        <a class="active" href="about.html">About</a>
-                        <!-- <a href="contact.html">Contact</a> -->
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="nav-main">
-             <button class="openbtn" onclick="openNav()">&#9776;</button>
-        </div>
-    </div>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mstyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Quicksand&amp;display=swap"
+    />
+    <link rel="shortcut icon" href="./assets/favo.png" type="image/x-icon" />
+    <script src="./js/icon.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <a href="https://klimate.netlify.app/" target="_blank" class="logo">
+        <i class="fal fa-cloud-sun-rain fa-3x"></i>
+        <h4>&nbsp;CliMate</h4>
+      </a>
 
-    <div class="p-section">
+      <div class="navMain">
+        <button class="openbtn" onclick="openNav()">&#9776;</button>
+      </div>
+
+      <div class="nav">
+        <div id="mySidepanel" class="sidebar">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            >&times;
+          </a>
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+              <a class="active" href="about.html">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <div class="contain">
+      <div class="p-section">
         <p>
-        Hello,<br />
-        I'm Chirag, a prospective developer. <br />
-        I try to create exciting Webapps. <br />
-        All of my projects are Open-Source, So Enjoy! <br />
-      </p>
-    </div>
-    
-    <div class="giticon">
-        <a class="fab fa-github fa-2x" href="https://github.com/ChiragChrg/CliMate" target="_blank"> Source Code</a>
+          Hello,<br />
+          I'm Chirag, a prospective developer. <br />
+          I try to create exciting Webapps. <br />
+          All of my projects are Open-Source, So Enjoy! <br />
+        </p>
+      </div>
+
+      <div class="giticon">
+        <a
+          class="fab fa-github fa-2x"
+          href="https://github.com/ChiragChrg/CliMate"
+          target="_blank"
+        >
+          Source Code</a
+        >
+      </div>
     </div>
 
-    <div class="abgimg">
-        <img src="assets/about.jpg" alt="weather-img" scroll="no"/>
-    </div>
+    <footer class="footerA">
+      <div class="social">
+        <a
+          id="f"
+          class="fab fa-facebook fa-2x"
+          href="https://www.facebook.com/ChiragChrg"
+          target="_blank"
+        ></a>
+        <a
+          id="i"
+          class="fab fa-instagram fa-2x"
+          href="https://www.instagram.com/chiragchrg/"
+          target="_blank"
+        ></a>
+        <a
+          id="t"
+          class="fab fa-twitter fa-2x"
+          href="https://twitter.com/ChiragChrg1"
+          target="_blank"
+        ></a>
+      </div>
 
-    <footer class="footer">
-        <p>&#169; Copyright 2020 ChiragChrg</p>
+      <p>&#169; Copyright 2020 ChiragChrg</p>
     </footer>
 
-    <div class="social">
-        <a id="i" class="fab fa-instagram fa-2x" href="https://www.instagram.com/chiragchrg/" target="_blank"></a>
-        <a id="f" class="fab fa-facebook fa-2x" href="https://www.facebook.com/ChiragChrg" target="_blank"></a>
-        <a id="t" class="fab fa-twitter fa-2x" href="https://twitter.com/ChiragChrg1" target="_blank"></a>
+    <div class="abgimg">
+      <img src="assets/about.jpg" alt="weather-img" scroll="no" />
     </div>
 
-    <script src="nav.js"></script>
-</body>
+    <script src="./js/nav.js"></script>
+  </body>
 </html>
