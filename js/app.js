@@ -45,8 +45,8 @@ const KELVIN = 273;
 // window.onload = getLocation();
 function getLocation() {
   if (navigator.geolocation) {
-    // navigator.geolocation.watchPosition(setPosition, showError);
-    navigator.geolocation.getCurrentPosition(setPosition, showError);
+    navigator.geolocation.watchPosition(setPosition, showError);
+    // navigator.geolocation.getCurrentPosition(setPosition, showError);
   } else {
     Alert.style.display = "block";
     Alert.innerHTML = `Geolocation is not supported by this browser.  <a href="javascript:void(0)" class="closeAlert" onclick="closeAlert()"
