@@ -43,16 +43,17 @@ const KELVIN = 273;
 
 //Browser Geolocation Support Check
 // window.onload = getLocation();
-// function getLocation() {
-if (navigator.geolocation) {
-  navigator.geolocation.getCurrentPosition(setPosition, showError);
-} else {
-  Alert.style.display = "block";
-  Alert.innerHTML = `Geolocation is not supported by this browser.  <a href="javascript:void(0)" class="closeAlert" onclick="closeAlert()"
+function getLocation() {
+  if (navigator.geolocation) {
+    // navigator.geolocation.watchPosition(setPosition, showError);
+    navigator.geolocation.getCurrentPosition(setPosition, showError);
+  } else {
+    Alert.style.display = "block";
+    Alert.innerHTML = `Geolocation is not supported by this browser.  <a href="javascript:void(0)" class="closeAlert" onclick="closeAlert()"
     >&times;
   </a>`;
+  }
 }
-// }
 
 //Set User Location
 function setPosition(position) {
@@ -86,10 +87,12 @@ function showError(error) {
       Alert.innerHTML = `An unknown error occurred. <a href="javascript:void(0)" class="closeAlert" onclick="closeAlert()"
   >&times;</a>`;
       break;
+
+    default:
+      Alert.innerHTML = `Unable to access Location on this Browser <a href="javascript:void(0)" class="closeAlert" onclick="closeAlert()"
+    >&times;</a>`;
   }
-  //   Alert.innerHTML = `Unable to access Location on this Browser <a href="javascript:void(0)" class="closeAlert" onclick="closeAlert()"
-  //   >&times;
-  // </a>`;
+
   // Alert.innerHTML = `<p class="errNotif"> ${error.message} </p>`;
 }
 
@@ -100,7 +103,7 @@ function closeAlert() {
 //Fetch Weather from API
 function getWeather(longitude, latitude) {
   let api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
-  console.log(api);
+  // console.log(api);
   fetch(api)
     .then(function (response) {
       let data = response.json();
@@ -144,7 +147,7 @@ function setQuery(evt) {
 
 function getResults(query) {
   let api2 = `https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${key}`;
-  console.log(api2);
+  // console.log(api2);
   fetch(api2)
     .then(function (searchinfo) {
       let info = searchinfo.json();

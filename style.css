@@ -130,6 +130,22 @@
     border-radius: 25px;
   }
 
+  .geoloc {
+    border-style: none;
+    outline-style: none;
+    background: transparent;
+    font-size: 35px;
+    position: relative;
+    top: 6px;
+    padding: 0 10px;
+    cursor: pointer;
+  }
+
+  .geoloc i {
+    color: #fff;
+    text-shadow: 2px 2px 4px #000000;
+  }
+
   .data {
     background-color: rgba(0, 0, 0, 0.4);
     margin: 10px 25%;
