@@ -119,9 +119,9 @@
     background-color: rgba(255, 0, 0, 0.6);
     color: #fff;
     padding: 10px 0;
-    margin: 0 3%;
+    margin: 0 4%;
     border-radius: 25px;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 600;
   }
 
@@ -203,13 +203,15 @@
 
   .moreData {
     background-color: rgba(0, 0, 0, 0.4);
-    margin: 20px 10%;
+    margin: 20px 8%;
     text-align: center;
     border-radius: 10px;
     padding: 20px;
     display: flex;
     /* flex-direction: column; */
     justify-content: center;
+    padding-bottom: 50px;
+    padding-left: 50px;
   }
 
   .moreData p {
@@ -224,7 +226,7 @@
     display: flex;
     flex-direction: column;
     padding: 0px 20px;
-    text-align: right;
+    text-align: left;
   }
 
   .sec2 {
@@ -232,9 +234,9 @@
     display: flex;
     flex-direction: column;
     padding: 0 20px;
-    text-align: right;
+    text-align: left;
     margin-top: 10%;
-    margin-left: -12px;
+    margin-left: -5px;
   }
 
   .lon,
@@ -250,6 +252,64 @@
     color: #fff;
     margin: 15px 0;
     /* border-radius: 10px; */
+  }
+
+  .lon {
+    position: relative;
+    left: -2px;
+  }
+
+  .lat {
+    position: relative;
+    right: 20px;
+  }
+
+  .sunUp {
+    position: relative;
+    right: 17px;
+  }
+
+  .sunDown {
+    position: relative;
+    right: 23px;
+  }
+
+  .minTemp {
+    position: relative;
+    right: 12px;
+  }
+
+  .maxTemp {
+    position: relative;
+    right: 19px;
+  }
+
+  .press {
+    position: relative;
+    right: 16px;
+  }
+
+  .humid {
+    position: relative;
+    right: 16px;
+  }
+
+  .windSpd {
+    position: relative;
+    right: 20px;
+  }
+
+  .windDir {
+    position: relative;
+    right: 18px;
+  }
+
+  .lon p {
+    margin-left: 8px;
+  }
+
+  .humid p {
+    margin-left: 6px;
   }
 
   .sec1 i,

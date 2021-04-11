@@ -42,14 +42,17 @@ weather.maxTemp = {
 const KELVIN = 273;
 
 //Browser Geolocation Support Check
-if ("geolocation" in navigator) {
+// window.onload = getLocation();
+// function getLocation() {
+if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(setPosition, showError);
 } else {
   Alert.style.display = "block";
-  Alert.innerHTML = `Your Device Does not Support Geolocation  <a href="javascript:void(0)" class="closeAlert" onclick="closeAlert()"
-  >&times;
-</a>`;
+  Alert.innerHTML = `Geolocation is not supported by this browser.  <a href="javascript:void(0)" class="closeAlert" onclick="closeAlert()"
+    >&times;
+  </a>`;
 }
+// }
 
 //Set User Location
 function setPosition(position) {
@@ -62,9 +65,31 @@ function setPosition(position) {
 // Show Geolocation Error
 function showError(error) {
   Alert.style.display = "block";
-  Alert.innerHTML = `Unable to access Location on this Browser <a href="javascript:void(0)" class="closeAlert" onclick="closeAlert()"
-  >&times;
-</a>`;
+
+  switch (error.code) {
+    case error.PERMISSION_DENIED:
+      Alert.innerHTML = `User denied Geolocation. <a href="javascript:void(0)" class="closeAlert" onclick="closeAlert()"
+  >&times;</a>`;
+      break;
+
+    case error.POSITION_UNAVAILABLE:
+      Alert.innerHTML = `Location info is unavailable. <a href="javascript:void(0)" class="closeAlert" onclick="closeAlert()"
+  >&times;</a>`;
+      break;
+
+    case error.TIMEOUT:
+      Alert.innerHTML = `Request Timed Out <a href="javascript:void(0)" class="closeAlert" onclick="closeAlert()"
+  >&times;</a>`;
+      break;
+
+    case error.UNKNOWN_ERROR:
+      Alert.innerHTML = `An unknown error occurred. <a href="javascript:void(0)" class="closeAlert" onclick="closeAlert()"
+  >&times;</a>`;
+      break;
+  }
+  //   Alert.innerHTML = `Unable to access Location on this Browser <a href="javascript:void(0)" class="closeAlert" onclick="closeAlert()"
+  //   >&times;
+  // </a>`;
   // Alert.innerHTML = `<p class="errNotif"> ${error.message} </p>`;
 }
 
