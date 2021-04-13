@@ -44,10 +44,13 @@ const KELVIN = 273;
 //Browser Geolocation Support Check
 // window.onload = getLocation();
 function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.watchPosition(setPosition, showError);
-    // navigator.geolocation.getCurrentPosition(setPosition, showError);
+  // if (navigator.geolocation) {
+  if ("geolocation" in navigator) {
+    // navigator.geolocation.watchPosition(setPosition, showError);
+    console.log("Checking Geo");
+    navigator.geolocation.getCurrentPosition(setPosition, showError);
   } else {
+    console.log("Failed Geo");
     Alert.style.display = "block";
     Alert.innerHTML = `Geolocation is not supported by this browser.  <a href="javascript:void(0)" class="closeAlert" onclick="closeAlert()"
     >&times;
@@ -59,7 +62,7 @@ function getLocation() {
 function setPosition(position) {
   let longitude = position.coords.longitude;
   let latitude = position.coords.latitude;
-
+  console.log("Getting Geo");
   getWeather(longitude, latitude);
 }
 
@@ -102,8 +105,9 @@ function closeAlert() {
 
 //Fetch Weather from API
 function getWeather(longitude, latitude) {
+  Alert.style.display = "none";
   let api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
-  // console.log(api);
+  console.log(api);
   fetch(api)
     .then(function (response) {
       let data = response.json();
@@ -121,8 +125,8 @@ function getWeather(longitude, latitude) {
       weather.lat = data.coord.lat;
       weather.rise = data.sys.sunrise;
       weather.set = data.sys.sunset;
-      weather.minTemp.value = Math.floor(info.main.temp_min - KELVIN);
-      weather.maxTemp.value = Math.floor(info.main.temp_max - KELVIN);
+      weather.minTemp.value = Math.floor(data.main.temp_min - KELVIN);
+      weather.maxTemp.value = Math.floor(data.main.temp_max - KELVIN);
       weather.press = data.main.pressure;
       weather.humid = data.main.humidity;
       weather.speedW = data.wind.speed;
@@ -146,6 +150,7 @@ function setQuery(evt) {
 }
 
 function getResults(query) {
+  Alert.style.display = "none";
   let api2 = `https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${key}`;
   // console.log(api2);
   fetch(api2)
