@@ -41,13 +41,15 @@
 
   .logo {
     display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
     color: #fff;
   }
 
   .logo h4 {
     font-size: 35px;
-    padding-top: 2px;
+    padding-bottom: 4%;
   }
 
   .navMain,
