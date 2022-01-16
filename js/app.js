@@ -68,8 +68,6 @@ function setPosition(position) {
 
 // Show Geolocation Error
 function showError(error) {
-  Alert.style.display = "block";
-
   switch (error.code) {
     case error.PERMISSION_DENIED:
       Alert.innerHTML = `User denied Geolocation. <a href="javascript:void(0)" class="closeAlert" onclick="closeAlert()"
@@ -95,8 +93,9 @@ function showError(error) {
       Alert.innerHTML = `Unable to access Location on this Browser <a href="javascript:void(0)" class="closeAlert" onclick="closeAlert()"
     >&times;</a>`;
   }
-
   // Alert.innerHTML = `<p class="errNotif"> ${error.message} </p>`;
+
+  Alert.style.display = "block";
 }
 
 function closeAlert() {
