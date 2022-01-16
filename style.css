@@ -80,7 +80,7 @@
     border-radius: 25px;
     font-size: 18px;
     font-weight: 500;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.1px;
     transition: 0.3s ease-in-out;
   }
 
@@ -307,42 +307,50 @@
     padding: 20px;
   }
 
-  .p-section {
-    margin-left: 100px;
-    margin-top: 40px;
+  .intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 6% 0;
+    padding: 2%;
+    transition: 0.4s ease-in-out;
   }
 
-  .p-section p {
-    color: #fff;
+  .intro p {
+    padding: 2%;
     font-size: 20px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-  }
-
-  .giticon {
-    margin-top: 5%;
-    text-align: center;
-  }
-
-  .giticon a {
-    text-decoration: none;
-    padding: 10px 20px;
-    border: 2px solid #fff;
-    border-radius: 50px;
-    background: transparent;
+    font-weight: 900;
+    margin-bottom: 5%;
     color: #fff;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
   }
 
-  .giticon a:hover {
+  .intro a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: #fff;
+    padding: 1% 4%;
+    transition: 0.4s ease-in-out;
+  }
+
+  .intro a:hover {
     border-radius: 0px 55px 10px 35px;
     background-color: #fff;
     color: #000;
+    box-shadow: 3px 6px 30px 0px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+  }
+
+  .intro a i {
+    padding-top: 3%;
   }
 
   .social {
-    display: flex;
+    display: none;
+    /* display: flex; */
     justify-content: space-evenly;
     padding: 2% 0;
   }
