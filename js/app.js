@@ -9,8 +9,8 @@ const Icon = document.querySelector(".weatherIcon");
 const TempValue = document.querySelector(".tempValue p");
 const MainDesc = document.querySelector(".descMain");
 const Desc = document.querySelector(".descSub");
-const bgElement = document.querySelector(".bgimg");
-const mbgElement = document.querySelector(".mbgimg");
+const BgElement = document.querySelector(".bgimg");
+const MbgElement = document.querySelector(".mbgimg");
 
 const Lon = document.querySelector(".lon");
 const Lat = document.querySelector(".lat");
@@ -217,8 +217,8 @@ function displayWeather() {
   TempValue.innerHTML = `${weather.temperature.value} &deg;C`;
   MainDesc.innerHTML = `${weather.mainDesc}`;
   Desc.innerHTML = `${weather.description}`;
-  bgElement.innerHTML = `<img src="assets/${weather.iconId}.jpg"/>`;
-  mbgElement.innerHTML = `<img src="assets/mobile/${weather.iconId}.jpg"/>`;
+  BgElement.innerHTML = `<img src="assets/${weather.iconId}.jpg"/>`;
+  MbgElement.innerHTML = `<img src="assets/mobile/${weather.iconId}.jpg"/>`;
 
   Lon.innerHTML = `<p> Lon: ${weather.lon}</p>`;
   Lat.innerHTML = `<p> Lat: ${weather.lat}</p>`;
